@@ -1,0 +1,135 @@
+.result {
+  padding-top: 35px;
+  padding-bottom: 10px;
+  
+  h2 {
+    text-align: left;
+  }
+}
+
+.result__slide {
+  width: 100%;
+  padding-bottom: 75px;
+  padding-left: 195px;
+  padding-right: 195px;
+  padding-top: 55px;
+  box-sizing: border-box;
+  
+  h3 {
+    color: @red;
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+  
+  p {
+    max-width: 750px;
+    margin-top: 0;
+  }
+}
+
+.result__date {
+  font-size: 40px;
+  margin-bottom: 15px;
+  
+  span {
+    color: @red;
+    border-bottom: 4px solid @red;
+  }
+  
+  sup {
+    font-size: 24px;
+  }
+}
+
+.result__file {
+  display: block;
+  float: right;
+  margin-top: 45px;
+  padding-left: 35px;
+  padding-right: 5px;
+  position: relative;
+  font-size: 16px;
+  color: @red;
+  font-style: italic;
+  
+  span {
+    border-bottom: 1px dashed @red;
+  }
+  
+  &:hover span {
+    border-bottom: 1px solid @red;
+  }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 24px;
+    height: 26px;
+    background-image: url(../img/icon-file.png);
+    background-repeat: no-repeat;
+  }
+}
+
+.result__pagination > .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  margin: 0 5px;
+  border: 1px solid @red;
+  opacity: 1;
+  background-color: rgba(255,255,255,0);
+}
+
+.result__pagination > .swiper-pagination-bullet-active {
+  background-color: @red;
+}
+
+.result__slider > .swiper-pagination-bullets {
+  bottom: 0;
+}
+
+.result__next {
+  background-image: url(../img/icon-arrow-next.png);
+  background-repeat: no-repeat;
+  background-size: 21px 13px;
+}
+
+.result__next.swiper-button-disabled {
+  opacity: 1;
+  background-image: url(../img/icon-arrow-disabled.png);
+  transform: rotate(180deg);
+}
+
+.result__prev {
+  background-image: url(../img/icon-arrow-next.png);
+  background-repeat: no-repeat;
+  background-size: 21px 13px;
+  transform: rotate(180deg);
+}
+
+.result__prev.swiper-button-disabled {
+  opacity: 1;
+  background-image: url(../img/icon-arrow-disabled.png);
+  transform: none;
+}
+
+.result__comment {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 45px;
+  font-weight: 400;
+  text-align: center;
+  
+  a {
+    color: @red;
+    text-decoration: underline;
+    
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.clients {
+  margin-bottom: 65px;
+  padding-top: 35px;
+  
+  h2 {
+    text-align: left;
+  }
+}
+
+.clients__next,
+.clients__prev {
+  width: 67px;
+  height: 100%;
+  top: 0;
+  background-color: #fff;
+}
+
+.clients__next {
+  right: 0;
+  background-image: url(../img/icon-arrow-red.svg);
+  background-repeat: no-repeat;
+  background-size: 12px 22px;
+}
+
+.clients__next.swiper-button-disabled {
+  opacity: 1;
+  background-image: url(../img/icon-arrow-grey.svg);
+  transform: rotate(180deg);
+}
+
+.clients__prev {
+  left: 0;
+  background-image: url(../img/icon-arrow-red.svg);
+  background-repeat: no-repeat;
+  background-size: 12px 22px;
+  transform: rotate(180deg);
+}
+
+.clients__prev.swiper-button-disabled {
+  opacity: 1;
+  background-image: url(../img/icon-arrow-grey.svg);
+  transform: none;
+}
+
+.clients__slider {
+  padding-left: 67px;
+  padding-right: 67px;
+  padding-top: 110px;
+  padding-bottom: 130px;
+  
+  .swiper-slide {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.clients__slider > .swiper-pagination-progressbar {
+  bottom: 10px;
+  top: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1005px;
+  height: 3px;
+  background: rgb(225, 225, 225) linear-gradient(to top, rgb(225, 225, 225), #fff 1px, #fff);
+}
+
+.clients__slider > .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: @yellow;
+}
