@@ -257,10 +257,10 @@
         Пресненская набережная, дом 12</address>
         <div class="footer__icons">
           <a href="#" class="footer__social">
-            <img src="img/icon-facebook.svg" alt="Facebook" width="40" height="40">
+            <img src="img/icon-facebook.svg" alt="Facebook" width="45" height="45">
           </a>
           <a href="#" class="footer__social">
-            <img src="img/icon-vk.svg" alt="VKontakte" width="40" height="40">
+            <img src="img/icon-vk.svg" alt="VKontakte" width="45" height="45">
           </a>
         </div>
       </div>
@@ -268,7 +268,7 @@
         <a href="Tel:+79258237511" class="phone">8 925 823 75 11</a>
         <a href="Tel:+79096427799" class="phone">8 909 642 77 99</a>
         <button type="button" class="btn btn--yellow footer__btn email">Связаться с нами</button>
-        <p>в рабочии дни<br>с 10:00 до 20:00</p>
+        <p class="footer__time">в рабочии дни<br>с 10:00 до 20:00</p>
         <p class="footer__comment"><span>e-mail: </span><a href="#">info@nomos.ru</a></p>
       </div>
     </div>
@@ -356,6 +356,12 @@
     $(".call").click(function(){
       $(function(){
         $("#modal-call").arcticmodal({
+          beforeOpen: function(data, el) {
+            $('body').css('overflow-y', 'hidden');
+          },
+          afterClose: function(data, el) {
+            $('body').css('overflow-y', 'scroll');
+          },
           overlay: {
           css: {
             backgroundColor: "#000",
@@ -368,6 +374,12 @@
     $(".email").click(function(){
       $(function(){
         $("#modal-email").arcticmodal({
+          beforeOpen: function(data, el) {
+            $('body').css('overflow-y', 'hidden');
+          },
+          afterClose: function(data, el) {
+            $('body').css('overflow-y', 'scroll');
+          },
           overlay: {
           css: {
             backgroundColor: "#000",
